@@ -74,10 +74,16 @@ img {
   top: 46%;
   color: white;
   background: black;
+  opacity: 0.5;
   border-radius: 9999px;
   padding: 4px 8px;
   cursor: pointer;
   user-select: none;
+}
+
+.left-arrow:hover,
+.right-arrow:hover {
+  opacity: 1;
 }
 
 .left-arrow {
@@ -86,4 +92,9 @@ img {
 
 .right-arrow {
   right: 5%;
+}
+
+.blip {
+  margin: 0 1px 0 1px;
+  cursor: pointer;
 }

@@ -44,13 +44,13 @@ function Carousal() {
             </div>
             <div className="blips">
                 {
-                    images.map((_,index) => 
+                    images.map((_, index) =>
                         <span
                             key={index}
-                            className={ index === current ? "activeBlip" : ""}
+                            className={"blip"}
                             onClick={() => setCurrent(index)}
                         >
-                            { index === current ? "◍" : "●"}
+                            {index === current ? "◍" : "●"}
                         </span>
                     )
                 }
