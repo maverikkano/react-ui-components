@@ -23,7 +23,7 @@ function Carousal() {
 
     return (
         <div>
-            <h2>Project 1: Carousel</h2>
+            <h2>Carousel</h2>
             <div className="slider">
                 <div className="left-arrow" onClick={prevSlide}>
                     ⬅
@@ -31,13 +31,27 @@ function Carousal() {
                 <div className="right-arrow" onClick={nextSlide}>
                     ⮕
                 </div>
-                {images.map(
-                    (image, index) =>
-                        current === index && (
-                            <div key={image} className="slide">
-                                <img src={image} alt="images" />
-                            </div>
-                        )
+                {
+                    images.map(
+                        (image, index) =>
+                            current === index && (
+                                <div key={image} className="slide">
+                                    <img src={image} alt="images" />
+                                </div>
+                            )
+                    )
+                }
+            </div>
+            <div className="blips">
+                {
+                    images.map((_,index) => 
+                        <span
+                            key={index}
+                            className={ index === current ? "activeBlip" : ""}
+                            onClick={() => setCurrent(index)}
+                        >
+                            { index === current ? "◍" : "●"}
+                        </span>
                     )
                 }
             </div>
