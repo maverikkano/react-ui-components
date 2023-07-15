@@ -2,6 +2,7 @@
 
 import "./App.css";
 import Carousal from "./components/Carousal";
+import Checklist from "./components/Checklist.jsx";
 
 export default function App() {
 
@@ -17,9 +18,8 @@ export default function App() {
 		<div>
 			<Carousal
 				images = {images}
-			></Carousal>
-			<hr></hr>
-			
+			/>
+			<Checklist/>
 		</div>
 	);
 }
