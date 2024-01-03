@@ -3,6 +3,7 @@
 import "./App.css";
 import Carousal from "./components/Carousal";
 import Checklist from "./components/Checklist.jsx";
+import {Routes, Route, Link, useLocation} from 'react-router-dom';
 
 export default function App() {
 
@@ -14,12 +15,20 @@ export default function App() {
         "https://images.pexels.com/photos/45201/kitty-cat-kitten-pet-45201.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
     ];
 
+	const { pathname } = useLocation();
+
 	return (
 		<div>
-			<Carousal
-				images = {images}
-			/>
-			<Checklist/>
+			<ul className="navbar">
+				<li><Link className={pathname === "/" ? "link active" : "link"} to="/">Home</Link></li>
+				<li><Link className={pathname === "/carousal" ? "link active" : "link"} to="/carousal">Carousal</Link></li>
+				<li><Link className={pathname === "/checklist" ? "link active" : "link"} to="/checklist">Checklist</Link></li>
+			</ul>
+			
+			<Routes>
+				<Route path="/carousal" element={<Carousal images={images}/>} />
+				<Route path="/checklist" element={<Checklist/>} />
+			</Routes>
 		</div>
 	);
 }

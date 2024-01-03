@@ -30,12 +30,13 @@ export default function Checklist() {
                         type="text"
                         name="item"
                         placeholder="Add a new item"
+                        autoComplete="off"
                         required
                     />
                     <button>Add </button>
                 </form>
 
-                <ul>
+                <ul className="checklist-items">
                     {items.map((item, index) => (
                         <Item
                             item={item}

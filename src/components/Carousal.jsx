@@ -28,7 +28,7 @@ function Carousal({images}) {
                         (image, index) =>
                             current === index && (
                                 <div key={image} className="slide">
-                                    <img src={image} alt="images" />
+                                    <img src={image} className="slideImage" alt="images" />
                                 </div>
                             )
                     )
