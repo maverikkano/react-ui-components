@@ -139,3 +139,53 @@ li {
   background-color: rgb(196, 0, 0);
   transition: 0.5s;
 }
+
+/* Accordian */
+
+div.accordian-container {
+  width: 50%;
+  margin: 4rem auto;
+  padding: 1rem 0;
+  background-color: blueviolet;
+  color: white;
+  border-radius: 1rem;
+  height: auto;
+}
+
+h2.accordian-heading {
+  margin: 1rem 0 0 0;
+}
+
+div.accordian-item {
+  width: 80%;
+  background-color: white;
+  color: black;
+  margin: 1rem auto;
+  padding: 1rem;
+  text-align: left;
+}
+
+div.accordian-question {
+  font-weight: bold;
+}
+
+div.accordian-answer {
+  display: none;
+  width: 90%;
+  margin-top: 1rem;
+}
+
+.faq-icon {
+  float: inline-end;
+  font-size: 0.5rem;
+  padding: 0.5rem;
+  background-color: aqua;
+  border: solid 2px blue;
+  border-radius: 5px;
+  cursor: pointer;
+  vertical-align: middle;
+}
+
+#fa-minus {
+  display: none;
+}
